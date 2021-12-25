@@ -66,7 +66,16 @@ def merge_sort(list):
             j += 1
 ```
 
-- Running Time: 
+- Running Time: Merge sort on an array of size `m` is smaller or equal to `4m+2`
+	- For every input array of size `n`, merge sort produces a sorted output array and uses at most **6nlog~2~n+6n** operations
+
+## Guiding Principles
+
+1. **Worse-case analysis**
+2. **Ignore small constants,  lower-order terms**
+3. **Asymptotic Analysis**
+
+
 
 
 
