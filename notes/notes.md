@@ -246,6 +246,22 @@ for ( let i = 0; i < list.length - 1; i++ ) {
 	2. insert selected element into correct position in the sorted part of list
 	3. change division of list
 
+```js
+for ( let i = 0; i < list.length; i++ ) {
+    let element = list[ i ];
+    let j = i;
+    while ( j > 0 && element < list[j-1]) {
+        list[j] = list[j-1];
+        j--;
+    }
+    list[j] = element;
+}
+```
+
+## Asymptotic notations
+
+
+
 ### Merge sort
 
 - A recursive algorithms that will sort the input array by dividing the input array in half and solve each half recurvisely, finally combine the results.
