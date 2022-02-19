@@ -192,9 +192,33 @@ DLinkedList list = new DLinkedList();
 - ArrayList v.s. Linked list:
 	- both take **O(N)** to add/remove from position `k`
 
-## Quadratic Sorting: 
+## Quadratic Sorting:
 
-## Merge sort
+### Bubble sort
+
+- traverse the list repeated
+	- if out of order elements are found, swap them
+
+```javascript
+for (let i = 0; i < list.length; i++) {
+    for (let j = 0; j < list.length - 1; j++) {
+        if (list[j] > list[j+1]) {
+            let store = list[j];
+            list[j] = list[j+1];
+            list[j+1] = store;
+        }
+    }
+}
+```
+
+### Selection sort
+
+- partition the list into two parts
+	- first part contains the smallest elements in order
+	- second part contains the rest of the elements
+	- 
+
+### Merge sort
 
 - A recursive algorithms that will sort the input array by dividing the input array in half and solve each half recurvisely, finally combine the results.
 
