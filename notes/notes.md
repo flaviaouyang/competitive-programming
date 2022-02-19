@@ -83,7 +83,7 @@ for(int element: numbers) {
 
 - ArrayList v.s. Linked List
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/arraylist-vs-linkedlist.png)
+![](img/arraylist-vs-linkedlist.png)
 
 - Singly Linked List Node
 
@@ -99,7 +99,7 @@ n.element = new Shape();
 
 - A linked list is **a sequence of nodes** along with **a reference to the <u>head</u> and <u>tail</u> node**.
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/head-tail.png)
+![](img/head-tail.png)
 
 ```java
 public class SLinkedList {
@@ -115,7 +115,7 @@ public class SLinkedList {
 SLinkedList list = new SLinkedList();
 ```
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/singly.png)
+![](img/singly.png)
 
 - `addFirst()`
 
@@ -130,7 +130,7 @@ head = newNode;
 size = size + 1;
 ```
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/add-first.png)
+![](img/add-first.png)
 
 - `removeFirst()`
 
@@ -148,17 +148,17 @@ if size == 0
 return tmp.element;
 ```
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/remove-first.png)
+![](img/remove-first.png)
 
 - **Time Complexity**: let N be list size
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/singly-time-complexity.png)
+![](img/singly-time-complexity.png)
 
 ## Doubly Linked Lists
 
 - Doubly linked list: each node has a reference to the next node AND to the previous node
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/doubly-linked-list.png)
+![](img/doubly-linked-list.png)
 
 ```java
 class DNode {
@@ -187,12 +187,12 @@ DLinkedList list = new DLinkedList();
 
 - **Time Complexity**:
 
-![](/Users/flaviaouyang/mcgill-cs/java-review/notes/img/doubly-linked-list.png)
+![](img/doubly-linked-list.png)
 
 - ArrayList v.s. Linked list:
 	- both take **O(N)** to add/remove from position `k`
 
-## Quadratic Sorting
+## Quadratic Sorting: 
 
 ## Merge sort
 
