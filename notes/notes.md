@@ -260,6 +260,67 @@ for ( let i = 0; i < list.length; i++ ) {
 
 ## Asymptotic notations
 
+### Big O
+
+- Let t(n) be a well-defined sequence of integers. 
+	- Let t(n) and g(n) be two sequences of integers, where n >= 0. We say that t(n) is ***asymptotically bounded above by*** g(n) if there exists a positive number n~0~ such that, for all n >= n~0~, t(n) <= g(n). That is t(n) **becomes less than or equal to g(n) once n becomes sufficiently large**.
+	- **Example**: t(n) = 5n + 70 is for sure **not** asymptotically bounded above by n, however, it is by 6n.
+- Big O allows us to define an aymptotic upper bound on t(n) in terms of *a simpler function* g(n):
+	- `1, log(n), n, nlog(n), n^2, n^3, 2^n, ...`
+- **Defintion**: Let t(n) and g(n) be well-defined sequences of integers. We say t(n) is O(g(n)) if there exists two positive numbers n~0~ and c such that, for all n >= n~0~, `t(n) <= c g(n)`.
+	- We say **t(n) is big O of g(n)**
+
+### Analysis of Algorithms
+
+- Time taken by an algorithm depends on the input and it grows with the size of such input.
+	- this is why we desribe the **running time of an algorithm with a function of the size of its input**.
+- *input size* depends on the problem being studied, and it can vary depending on the algorithm
+	- it can be
+		- number of elements in the input
+		- number of bits required to represent the input
+		- multiple numbers
+- *running time* is the number of primitive operations executed
+
+### O(1)
+
+- f(n) is O(1) if there exists two positive constants n~0~ and c such that, for all n >= n~0~
+	- f(n) is **bounded by a constant**.
+
+### Scaling
+
+- For all constant factors *a*> 0, if f(n) is O(g(n)), then `a * f(n)` is also O(g(n)).
+
+### Sum Rule
+
+- If f~1~(n) is O(g(n)) and f~2~(n) is O(g(n)), then f~1~(n) + f~2~(n) is O(g(n)).
+
+### Produce Rule
+
+- If f~1~(n) ia O(g(n)) and f~2~(n) is O(g(n)), then f~1~(n) * f~2~(n) is O(g~1~(n) * g~2~(n)).
+
+### Transitivity Rule
+
+- If f(n) is O(g(n)) and g(n) is O(h(n)), then f(n) is O(h(n)).
+
+### Bounds
+
+![](img/big-o.png)
+
+### Big Omega Ω( )
+
+- Aymptotic lower bounds: algortihms take ***at least*** a certain time to run as a function of input size *n*.
+- f(n) is asymptotically bounded below by g(n) if there exists an n~0~ such that, for all n >= n~0~, f(n) >= g(n).
+- Given a function g(n), we denote by Ω(g(n)), ***big-omega of g of n***.
+	- Ω notation describes an **asymptotic lower bound**.
+
+### Big Theta θ( )
+
+- Given a function g(n), we denote by θ(g(n)), ***big theta of g of n***, the following set of functions:
+	- θ(g(n)) = { f(n): there exists positive constants c~1~, c~2~, and n~0~ such that c~1~g(n) <= f(n) <= c~2~g(n) for all n >= n~0~.
+	- We use big theta to describe an **asymptotic tight bound**.
+
+## Stacks and Queues
+
 
 
 ### Merge sort

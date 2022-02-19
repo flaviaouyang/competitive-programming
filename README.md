@@ -6,6 +6,8 @@
 - LinkedList
 - Quadratic Sorting
 - Asymptotic Notations
+- Stacks
+- Queues
 
 ## LICENSE
 
