@@ -194,9 +194,11 @@ DLinkedList list = new DLinkedList();
 
 ## Quadratic Sorting:
 
+- Time complexity: O(N^2^)
+
 ### Bubble sort
 
-- traverse the list repeated
+- traverse the list repeatedly
 	- if out of order elements are found, swap them
 
 ```javascript
@@ -214,9 +216,35 @@ for (let i = 0; i < list.length; i++) {
 ### Selection sort
 
 - partition the list into two parts
-	- first part contains the smallest elements in order
-	- second part contains the rest of the elements
-	- 
+	- one sorted and the other unsorted
+- **Procedure**:
+	1. select smallest element in the unsorted part of the list
+	2. swap the element with element in the initial position of the unsorted array
+	3. Change where you divide the array from sorted part to the unsorted part
+
+```js
+for ( let i = 0; i < list.length - 1; i++ ) {
+    let min = i;
+    for ( let j = i + 1; j < list.length; j++ ) {
+        if (list[j] < list[min]) {
+            min = j;
+        }
+    }
+    if (min != i) {
+        [list[min], list[i]] = [list[i], list[min]];
+    }
+}
+```
+
+### Insertion sort
+
+- divide list into two parts
+	- one sorted
+	- another unsorted
+- **Procedure**:
+	1. select first element of the unsorted 
+	2. insert selected element into correct position in the sorted part of list
+	3. change division of list
 
 ### Merge sort
 
