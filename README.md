@@ -1,4 +1,4 @@
-# Algorithms and Data Structure
+# Data Structure and Algorithms
 
 ## CONTENT
 
