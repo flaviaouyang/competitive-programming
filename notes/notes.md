@@ -321,6 +321,36 @@ for ( let i = 0; i < list.length; i++ ) {
 
 ## Stacks and Queues
 
+### Abstract Data Type (ADT)
+
+- ADT is **a model for a data type**. It defines a data type by its behavior from the user's perspective only. It describes the possible values and the set of possible operations on the data type.
+	- ignores the details of implementation
+	- **more abstract than a data structure**. A data structure is a concrete representation of data which includes the implementation details.
+- Example: List ADT
+
+```pseudocode
+get(i);
+set(i, e);
+add(i, e);
+remove(i);
+remove(e);
+...
+```
+
+- **Stack ADT**:
+
+	- A stack is a list. However, it **does not** have operations to access the list element i directly. Instead one accesses only the element at one end of the list.
+
+	![](img/stack.png)
+
+```pseudocode
+push(element);
+pop();
+
+isEmpty();
+peek();
+```
+
 
 
 ### Merge sort
@@ -376,6 +406,3 @@ def merge_sort(list):
 
 - Running Time: Merge sort on an array of size `m` is smaller or equal to `4m+2`
 	- For every input array of size `n`, merge sort produces a sorted output array and uses at most **6nlog~2~n+6n** operations
-
-
-
