@@ -367,7 +367,38 @@ peek();
 
 ![](img/stack-queue.png)
 
+## Induction
 
+### Proof
+
+```math
+1 + 2 + 3 + ... + n
+= n* (n+1) * 0.5
+```
+
+- Consider `n/2` pairs,
+	- if n is even, sum is `n/2*(n+1)`
+	- if n is odd, sum is `((n-1)/2*n)+n`
+
+### Recursive (inductive) Definition
+
+- some set of elements can be defined recursively / inductively
+- A recursive / inductive definition consists of the following:
+	- **base clause**: one or more basic/initial element of the set
+	- **inductive clause(s)**: rules on how to generate *new* elements of the set from *old* ones
+	- **final clause**: states that no other element is part of the set
+
+### Example: natural numbers
+
+- set of natural numbers can be defined as:
+	- base clause: 0 is a natural number
+	- inductive clause: if n is a natural number, n+1 is also a natural number
+	- final clause: nothing else is a natural number
+
+### Mathematical Induction
+
+- Consider `for all n >= n0, p(n) is true` where n~0~ is some constant and proposition p(n) has value true or false for each n
+	- if n is an element of an inductively defined set, then the statement above can be proven using a technique called ***mathematical induction***.
 
 ### Merge sort
 
