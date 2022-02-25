@@ -351,6 +351,22 @@ isEmpty();
 peek();
 ```
 
+### Stack Overflow and Underflow
+
+- Overflow: a stack has a finite capacity and we attempt to push
+- Underflow: a stack is empty and we attempt to pop
+
+### Queue ADT
+
+- enqueue(e): add at back
+- dequeue(): remove from front
+
+![](img/queue-adt.png)
+
+### Stack vs Queue
+
+![](img/stack-queue.png)
+
 
 
 ### Merge sort
