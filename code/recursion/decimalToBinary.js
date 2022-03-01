@@ -12,5 +12,5 @@ const decimalToBinary = (num) => {
   num /= 2;
   return decimalToBinary(num);
 };
-printAnswer = decimalToBinary(50);
+printAnswer = decimalToBinary(243);
 console.log(...printAnswer);
