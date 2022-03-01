@@ -367,7 +367,7 @@ peek();
 
 ![](img/stack-queue.png)
 
-## Induction
+## Induction and Recursion
 
 ### Proof
 
@@ -399,6 +399,80 @@ peek();
 
 - Consider `for all n >= n0, p(n) is true` where n~0~ is some constant and proposition p(n) has value true or false for each n
 	- if n is an element of an inductively defined set, then the statement above can be proven using a technique called ***mathematical induction***.
+
+### Recursive Algorithm
+
+```js
+const countdown = (i) => {
+    if (i === 0) {
+        console.log(0);
+        return 0;
+    }
+    console.log(i);
+    countdown(i-1);
+};
+```
+
+- Recursive functions consist of
+	- **base case**: one (or a finite number) of terminating scenario that does not use recursion to produce an answer
+	- **recursive (inductive) steps**: rules that determine how to produce an answer from simpler cases
+
+### Recursive vs. Iteration
+
+- recursion and iteration are equally expressive
+	- anything recursion can do, iteration can do and vice versa
+
+### Example: decimal to binary
+
+```js
+answer = [];
+const decimalToBinary = (num) => {
+  if (num === 0) {
+    return 0;
+  }
+  if (num === 1) {
+    answer.unshift(1);
+    return answer;
+  }
+  answer.unshift(num % 2);
+  num -= num % 2;
+  num /= 2;
+  return decimalToBinary(num);
+};
+```
+
+- Algorithm:
+	1. procedure BinaryExpansion(n)
+	2. if n > 0, BinaryExpansion(n/2); print(n%2);
+
+### Binary Search
+
+- Search a list
+	- **Goal**: find a given element in a list
+	- **Solution**: go through all elements in the list and check whether the element is there
+- **Inputs**:
+	1. a sorted list
+	2. the element we're looking for aka the <u>**key**</u>
+- **Idea**:
+	1. if key is less than the middle element, only search the first half
+	2. if key is greater than middle element, only search the latter half
+	3. if key is the middle element, return its index
+
+```js
+const binarySearch = (arr, key) => {
+  let midIndex = Math.floor((arr.length - 1) / 2);
+  let mid = arr[midIndex];
+  if (key === mid) {
+    return "Found";
+  } else if (key < mid && arr.length > 0) {
+    return binarySearch(arr.slice(0, midIndex), key);
+  } else if (key > mid && arr.length > 0) {
+    return binarySearch(arr.slice(midIndex + 1, arr.length), key);
+  } else {
+    return "Not Found";
+  }
+};
+```
 
 ### Merge sort
 
