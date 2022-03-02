@@ -821,3 +821,90 @@ cat.descendants.push(shortHair, garfield);
 
 ![](img/pet-store-tree.drawio.png)
 
+## Tree Traversals
+
+- The question of how to visit (enumerate, iterate through, traverse) all the nodes of a tree?
+
+### Depth First Preorder
+
+```pseudocode
+depthFirst (root) {
+	if (root is not empty) 
+		visit root
+		for each child of root
+			depthFirst (child)
+}
+```
+
+- **preorder traversal**: visit the root before the children
+- **visit a node**: 
+	- this implies that **you do something at that node**
+
+![](img/depth-first-pre.png)
+
+### Depth First Postorder
+
+- **post order**: visit the children before the root
+
+```pseudocode
+depthFirst (root) {
+	if (root is not empty) {
+		for each child of root
+			depthFirst(child)
+		visit root
+	}
+}
+```
+
+![](img/depth-first-post.png)
+
+### Call sequence of `depthFirst()`
+
+- The call sequence of `depthFirst()` is the same for preorder and postorder implementation 
+
+![](img/depth-first-call-sequence.png)
+
+- **call stack of `depthFirst(root)`**
+
+![](img/depth-first-call-stack.png)
+
+### Non-recursive implementation of tree traversal
+
+- **Stack**: `depth first`
+
+```pseudocode
+treeTraversalStack (root) {
+	stack s = empty
+	s.push (root)
+	while s is not empty {
+		current = s.pop()
+		visit current
+		for each child of current
+			s.push(child)
+	}
+}
+```
+
+![](img/depth-stack-call-order.png)
+
+### Breath first traversal
+
+- **Queue**:
+	- for each level i
+		- Visit all nodes at level i
+
+```pseudocode
+treeTraversalQueue (root) {
+	queue q = empty
+	q.enqueue (root)
+	while q is not empty {
+		current = q.dequeue()
+		visit current
+		for each child of current
+			q.enqueue(child)
+	}
+}
+```
+
+![](img/breadth-first-queue-call-order.png)
+
