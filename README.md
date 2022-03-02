@@ -3,7 +3,7 @@
 ## STRUCTURE
 
 - [Notes Collected](notes/notes.md)
-- [Code Implementation](code)
+- [Code Implementation](https://github.com/flaviaouyang/data-structure-and-algorithms/tree/master/code)
 
 ## CONTENT
 
