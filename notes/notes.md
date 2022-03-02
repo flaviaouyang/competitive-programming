@@ -1027,7 +1027,129 @@ inorder (root) {
 
 ## Binary Search Trees
 
+- Definition:
+	- binary tree
+	- keys are comparable and unique 
+		- **No duplicates**
+	- for each node, **all** descendants in left subtree are less than the node, and **all** descendants in the node's right subtree are greater than the node
+		- comparison is based on node key
+- Example of Binary search tree
 
+![](img/bst.png)
+
+- Example: **Not** a binary search tree
+	- because j is larger than f
+
+![](img/not-bst.png)
+
+### BST ADT
+
+```pseudocode
+find(key)
+findMin()
+findMax()
+add(key)
+remove(key)
+```
+
+### `find()`
+
+![](img/bst-find.png)
+
+- `find(root, g)` returns the `g` node
+- `find(root, s)` return `null`
+
+- Implementation
+
+```pseudocode
+find(root, key) {
+	if (root == null) {
+		return null
+	} else if (root.key == key) {
+		return root
+	} else if (key < root.key) {
+		return find(root.left, key)
+	} else {
+		return find(root.right, key)
+	}
+}
+```
+
+### `findMin()`
+
+- Return the node with the smallest key
+
+```pseudocode
+findMin() {
+	if (root == null) {
+		return null
+	} else if (root.left == null) {
+		return root
+	} else {
+		return findMin(root.left)
+	}
+}
+```
+
+- `findMax( )` is similar but for `root.right`
+
+### `add()`
+
+- add a new node to the tree
+	- a new node is always a **leaf**
+
+```pseudocode
+add(root, key) {
+	if (root == null) {
+		root = new node(key)
+	} else if (key < root.key) {
+		root.left = add (root.left, key)
+	} else if (key > root.key) {
+		root.right = add (root.right, key)
+	}
+	return root
+}
+```
+
+### `remove()`
+
+```pseudocode
+remove(root, key) {
+	if ( root == null ) {
+		return null;
+	} else if (key < root.key) {
+		root.left = remove (root.left, key)
+	} else if (key > root.key) {
+		root.right = remove (root.right, key)
+	} else if (root.left == null) {
+		root = root.right
+	} else if (root.right == null) {
+		root = root.left
+	} else {
+		root.key = findMin (root.right).key
+		root.right = remove(root.right, root.key)
+	}
+	return root
+}
+```
+
+### Balance in BST
+
+- A BST is **balanced** when height is `log(n+1)-1` and n = 2^h+1^-1
+
+![](img/bst-balanced.png)
+
+- **Maximally unbalanced** when height is n-1
+
+![](img/bst-unbalanced.png)
+
+### Time Complexity Analysis
+
+- for maximally unbalanced bst
+	- all methods have a base case of `O(1)` and worst case of `O(n)`
+- For balanced bst
+	- all methods but `find()` have a best case of `O(log n)` and worst case of `O(log n)`
+	- `find()` has a best case of `O(1)`
 
 ## Heaps
 
