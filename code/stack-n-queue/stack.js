@@ -13,8 +13,9 @@ class Stack {
   pop() {
     if ((this.items.length = 0)) {
       return "Stack Underflow";
+    } else {
+      return this.items.pop();
     }
-    return this.items.pop();
   }
 
   // return the element on the top of the Stack but does not delete it
@@ -38,9 +39,8 @@ class Stack {
 
 let test = new Stack();
 test.push(10);
-test.pop();
-test.pop();
 test.push(12);
 test.push(15);
-test.peep();
-console.log(test.printStack());
+console.log(test);
+console.log(test.pop());
+console.log("print stack: " + test.printStack());
