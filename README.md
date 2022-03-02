@@ -18,8 +18,12 @@
 - Induction
   - [Recursion](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#induction-and-recursion)
   - [Binary Search](code/recursion/binarySearch.js)
-  - Merge sort
-  - Quick sort
+  - [Merge sort](code/sort/mergeSort.js)
+  - [Quick sort](code/sort/quickSort.js)
+  - Recurrence
+- Trees
+  - Rooted trees
+  
 
 ## LICENSE
 
