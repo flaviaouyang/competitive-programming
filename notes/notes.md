@@ -604,3 +604,190 @@ const quickSort = (arr) => {
 
 ### Recurrences
 
+- A **recurrence** is an equation or inequality that describes a function in terms of its value on smaller inputs
+
+### How to solve a recurrence
+
+- Different methods to solve a recurrence:
+	1. forward substitution
+	2. back substitution
+	3. Recursion-treee method
+	4. Master theorem
+	5. and more...
+
+![](img/back-substitution.png)
+
+## Rooted Trees
+
+- Two kinds of data structures
+
+	1. Linear:
+
+		- array
+		- linked list
+		- etc
+
+	2. Non-linear:
+
+		- Tree 
+
+		![](img/tree.png)
+
+		- Graph
+
+		![](img/graph.png)
+
+### Terminology
+
+- A tree is a collection of **nodes** (**vertexes**)
+	- The **root** is the top node in a tree
+
+![](img/root.png)
+
+- A **directed edge** is ordered pair of nodes (v~i~, v~j~) `(from, to)`
+	- Trees can be **undirected or directed**.
+	- If directed, the edges are either **<u>all</u> pointing away from the root** or **<u>all</u> pointing twowards the root**
+
+![](img/directed-edge.png)
+
+- A **child** is a node directly connected to another node when moving away from the root
+- A **parent** is a node directly connected to another node when moving towards the root
+- Every node except the root **is a child** and has **exactly one parent**
+
+![](img/parent-child.png)
+
+- Two node are **siblings** if **they have the same parent**
+
+![](img/sibling.png)
+
+- An **internal node** is a node with **at least one child**
+- An **leaf (external node)** is a node with **no children** 
+
+![](img/internal-external-nodes.png)
+
+- A **path** in a tree is a **sequence of nodes** (v~1~, v~2~,..., v~k~) such that (v~i~, v~i+1~) is an edge.
+- The **length** of a path is **the number of edges in the path** (aka the number of nodes in the path minus 1)
+- *Note*: a path with **just one node** (v~1~) has length of **0** since it has no edges
+
+![](img/path.png)
+
+- Node *v* is an **ancestor** of node *w* is there is a path from *v* to *w*. 
+	- We can also say that *w* is a **descendent** of node *v*.
+
+![](img/ancestor-descendent.png)
+
+- The **depth (level)** of a node is the length of the path from the root to the node.
+
+![](img/depth.png)
+
+- The **height** of a node is the **maximum length of a path from that node to a leaf**
+
+![](img/height.png)
+
+### Edge Direction
+
+- For some trees,
+	- edges are directed from parent to child
+	- edge are directed from child to parent
+	- Edge are directed both from parent to child and child to parent
+	- Edge direction is ignored
+- **Most definitions will assume edges are from parent to child**
+
+### Non-rooted trees
+
+- Non-rooted trees are most common when edges are **undirected** and there is no natural way to **defined the root**
+
+![](img/non-rooted.png)
+
+### Number of edges
+
+- If a rooted tree has *n* nodes, then it has ***n-1*** edges
+	- Because every edge is of the form `(parent, child)` and each node **except the root** is a child and each child has exactly one parent
+
+### Recursive definition of rooted tree
+
+- A tree T is a **finite and possibly empty** set of *n* nodes such that
+	- if n > 0, then one of the nodes is the root r
+	- if n > 1, then n -1 non-root nodes are partitioned into non-empty subsets T~1~, T~2~, ..., T~k~, each of which is a tree (**subtree**) and the roots of the subtrees are the children of root r.
+
+![](img/recursive-tree.png)
+
+### Another definition of rooted trees
+
+```pseudocode
+tree = root | (root listOfSubtrees)
+listOfSubtrees = tree | tree listOfSubtrees
+*listOfSubtrees cannot be empty
+```
+
+```pseudocode
+(6 (2 1 7) 3 (4 5) (9 8 0))
+```
+
+![](img/tree-notation-example.png)
+
+### Compute the depth of a node
+
+- Do this efficiently, we require nodes to **have a parent link**. This is *analogous* to a *previous* link is a doubly linked list
+
+```pseudocode
+// find the depth/level of node v
+
+depth (v) {
+	if (v.parent == null) 
+		return 0
+	else 
+		return 1 + depth (v.parent)
+}
+```
+
+![](img/compute-depth.png)
+
+### Compute the height of a node
+
+```pseudocode
+height (v) {
+	if (v is a leaf)
+		return 0
+	else 
+		h = 0
+		for each child w of v
+			h = max (h, height(w))
+		return 1 + h
+}
+```
+
+### Implementation of a tree
+
+- Similar to linked lists
+	- Create a data type to represent tree nodes
+	- represent a tree with a pointer to the root node
+
+```java
+class Tree<T> {
+    TreeNode<T> root;
+    
+    class TreeNode<T> {
+        T element;
+        ArrayList<TreeNode<T>> children;
+    }
+}
+```
+
+- Another implementation: **first child, next sibling**
+
+![](img/first-child-next-sibling.png)
+
+```java
+class Tree<T> {
+    TreeNode<T> root;
+    
+    class TreeNode<T> {
+        T element;
+        TreeNode<T> firstChild;
+        TreeNode<T> nextSibling;
+        TreeNode<T> parent;
+    }
+}
+```
+
