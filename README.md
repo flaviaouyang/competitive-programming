@@ -2,7 +2,7 @@
 
 ## STRUCTURE
 
-- [Notes](notes/notes.md)
+- [Notes Collected](notes/notes.md)
 - [Code Implementation](code)
 
 ## CONTENT
@@ -20,22 +20,21 @@
   - [Binary Search](code/recursion/binarySearch.js)
   - [Merge sort](code/sort/mergeSort.js)
   - [Quick sort](code/sort/quickSort.js)
-  - Recurrence
+  - [Recurrence](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#recurrences)
 - Trees
-  - Rooted trees
-  
+  - [Rooted trees](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#rooted-trees)
 - Tree Traversal
-  - DFS
+  - [DFS](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#depth-first-preorder)
   	- Pre-order
   		- Recursion
   		- Stack 
   	- Post-order
-  - BFS
+  - [BFS](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#breath-first-traversal)
   	- Queue implementation
-- Binary Tree
-- Expression Tree
-- Binary Search Tree
-- Heaps
+- [Binary Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#binary-trees)
+- [Expression Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#expression-trees)
+- [Binary Search Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#binary-search-trees)
+- [Heaps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#heaps)
 
 ## LICENSE
 
