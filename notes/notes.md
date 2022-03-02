@@ -1167,3 +1167,50 @@ contains(element)
 remove(element)
 ```
 
+### Complete Binary Tree
+
+- **Definition**: Binary tree of height *h* such that **every level less than h is full** and **all nodes at level h are as far to the left as possible**
+
+![](img/complete-binary-tree.png)
+
+### Min Heap
+
+- **Definition**: Complete binary tree with **unique comparable** elements/keys, such that **each node's key is less than its children's key**
+
+![](img/min-heap.png)
+
+- `add( )`
+
+```pseudocode
+add (key) {
+	current = new node at next available leaf position
+	current.key = key
+	if (root == null) {
+		root = current
+	} else {
+		while (current != root && current.key < current.parent.key) {
+			swapKeys(current, current.parent)
+			current = current.parent
+		}
+	}
+}
+```
+
+- `removeMin()`: return root element
+
+```pseudocode
+removeMin() {
+	temp = root.key
+	remove the last leaf node and store its key into the root
+	current = root
+	while (current.left != null && current.key > current.left.key) || (current.right != null && current.key > current.right.key) {
+		minChild = child with smaller key
+		swapKeys(current, minChild)
+		current = minChild
+	}
+	return temp
+}
+```
+
+### Build a heap
+
