@@ -1025,3 +1025,23 @@ inorder (root) {
 - **Prefix** expressions called *polish notation*
 - **Postfix** expression called *reverse polish notation* (**RPN**)
 
+## Binary Search Trees
+
+
+
+## Heaps
+
+- Assume a set of comparable elements or *keys*
+	- like a queue, but now there is a more general defintion on element removal:
+		- remove the one with highest priority 
+	- Example: ER room
+- Priority Queue ADT
+
+```pseudocode
+add(key)
+removeMin()
+peek()
+contains(element)
+remove(element)
+```
+
