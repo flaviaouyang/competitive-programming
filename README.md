@@ -38,4 +38,4 @@
 
 ## LICENSE
 
-The content contained within this repository is under the MIT License.
+Content within this repository is under the MIT License.
