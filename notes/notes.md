@@ -563,3 +563,44 @@ const mergeSort = (arr) => {
 
 ### Quick Sort
 
+- Quick sort is also a **divide and conquer algorithm**
+- **IDEA**:
+	1. pick and element of the array: **the pivot**
+	2. partition the list moving the pivot to its correct position
+		- make sure all teh lower elements are on its left and all larger elements on its right
+	3. sort left part and right part recursively
+	4. Keep sorting until there's no elements left
+
+![](img/quick-sort.png)
+
+- **Pivot**: can be picked in different ways
+	- the first element
+	- the last element
+	- a random element
+	- median
+
+```js
+const quickSort = (arr) => {
+  let pivot = arr[0];
+  while (!arr === arr.sort(function(a, b) { return a > b ? 1 : -1})) {
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < pivot) {
+        arr.shift(arr[i]);
+        arr.splice(i, 1);
+      } else {
+        arr.push(arr[i]);
+        arr.splice(i, 1);
+      }
+    }
+    quickSort(arr);
+  }
+  return arr;
+};
+```
+
+### Merge sort vs Quick sort
+
+- merge sort uses an extra list. More space can hurt performance for big lists
+
+### Recurrences
+
