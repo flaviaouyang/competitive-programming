@@ -476,6 +476,12 @@ const binarySearch = (arr, key) => {
 
 ### Merge sort
 
+- Merge sort is **divide and conquer algorithm**
+	- **IDEA**:
+		1. partition the list into two halves
+		2. sort each hald recursively
+		3. merge sorted half maintaining the order
+
 - A recursive algorithms that will sort the input array by dividing the input array in half and solve each half recurvisely, finally combine the results.
 
 ![merge sort](img/merge-sort.png)
@@ -527,3 +533,33 @@ def merge_sort(list):
 
 - Running Time: Merge sort on an array of size `m` is smaller or equal to `4m+2`
 	- For every input array of size `n`, merge sort produces a sorted output array and uses at most **6nlog~2~n+6n** operations
+
+- **Solving it recursively**:
+
+![](img/merge-sort-recursion.png)
+
+```js
+const merge = (arr1, arr2) => {
+  let merged = [];
+  while (arr1.length && arr2.length) {
+    if (arr1[0] < arr2[0]) {
+      merged.push(arr1.shift());
+    } else {
+      merged.push(arr2.shift());
+    }
+  }
+  return [...merged, ...arr1, ...arr2];
+};
+
+const mergeSort = (arr) => {
+  if (arr.length <= 1) {
+    return arr;
+  } else {
+    let listA = arr.splice(0, arr.length/2);
+    return merge(mergeSort(listA), mergeSort(arr));
+  }
+};
+```
+
+### Quick Sort
+
