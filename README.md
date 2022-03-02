@@ -24,6 +24,18 @@
 - Trees
   - Rooted trees
   
+- Tree Traversal
+  - DFS
+  	- Pre-order
+  		- Recursion
+  		- Stack 
+  	- Post-order
+  - BFS
+  	- Queue implementation
+- Binary Tree
+- Expression Tree
+- Binary Search Tree
+- Heaps
 
 ## LICENSE
 
