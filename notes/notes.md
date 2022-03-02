@@ -824,6 +824,8 @@ cat.descendants.push(shortHair, garfield);
 ## Tree Traversals
 
 - The question of how to visit (enumerate, iterate through, traverse) all the nodes of a tree?
+	- Depth First Search (**DFS**)
+	- Breadth First Search (**BFS**)
 
 ### Depth First Preorder
 
@@ -887,6 +889,44 @@ treeTraversalStack (root) {
 
 ![](img/depth-stack-call-order.png)
 
+```js
+// preorder
+const DFS = (root) => {
+  if (root !== undefined) {
+    console.log(root.value);
+    for (let i = 0; i < root.children.length; i++) {
+      DFS(root.children[i]);
+    }
+  }
+};
+
+DFS(root);
+
+// post order
+const DFSPost = (root) => {
+  if (root !== undefined) {
+    for (let i = 0; i < root.children.length; i++) {
+      DFS(root.children[i]);
+    }
+    console.log(root.value);
+  }
+};
+DFSPost(root);
+
+// stack
+const DFSStack = (root) => {
+  const s = [];
+  s.push(root);
+  while (s.length !== 0) {
+    let current = s.pop();
+    console.log(current.value);
+    for (let i = 0; i < current.children.length; i++) {
+      s.push(current.children[i]);
+    }
+  }
+};
+```
+
 ### Breath first traversal
 
 - **Queue**:
@@ -907,4 +947,81 @@ treeTraversalQueue (root) {
 ```
 
 ![](img/breadth-first-queue-call-order.png)
+
+```js
+const BFS = (root) => {
+  const queue = [];
+  queue.push(root);
+  while (queue.length > 0) {
+    let current = queue.shift();
+    console.log(current.value);
+    for (let i = 0; i < current.children.length; i++) {
+      queue.push(current.children[i]);
+    }
+  }
+};
+```
+
+## Binary Trees
+
+- Each node has **at most** two children
+
+![](img/binary-tree.png)
+
+- In a binary tree of height *h*, 
+	- the maximum number of nodes *n* is 2^h+1^-1
+	- the minimum number of nodes n is h+1
+- **Implementation of Binary Tree**
+
+```java
+class BinaryTree<T> {
+    BTNode<T> root;
+    
+    class BTNode<T> {
+        T element;
+        BTNode<T> leftChild;
+        BTNode<T> rightChild;
+    }
+}
+```
+
+- **DFS in Binary Tree**
+
+```pseudocode
+preorder (root) {
+	if (root is not empty) {
+		visit root
+		preorder(root.left)
+		preorder(root.right)
+	}
+}
+
+postorder (root) {
+	 if (root is not empty) {
+	 	postorder(root.left)
+	 	postorder(root.right)
+	 	visit root
+	 }
+}
+
+inorder (root) {
+	if (root is not empty) {
+		inorder(root.left)
+		visit root
+		inorder (root.right)
+	}
+}
+```
+
+![](img/3-orders.png)
+
+## Expression Trees
+
+![](img/expression-trees.png)
+
+- Internal nodes are **operators**
+- Leaves are **operands**
+- An expression tree can be a way of **thinking about the ordering of operations used when evaluating an expression**
+- **Prefix** expressions called *polish notation*
+- **Postfix** expression called *reverse polish notation* (**RPN**)
 
