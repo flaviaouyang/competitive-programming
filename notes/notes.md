@@ -1212,5 +1212,46 @@ removeMin() {
 }
 ```
 
-### Build a heap
+### Build a heap (the fast way)
+
+- Half the nodes of a heap are leaves
+	- each leaf is a heap with one node
+- The last non-leaf node has index size/2
+
+## Maps
+
+### Mathematics
+
+- A map is a set of pairs `{(x, f(x))}`
+	- each x in domain maps to exactly one f(x) in codomain
+	- But f(x~1~) = f(x~2~) for different x~1~. x~2~, aka many-to-one
+
+![](img/map-math.png)
+
+### Map ADT
+
+- A map is a set of (key, value) pairs
+	- for each key, there is at more one value
+	- However, it's possible for two keys to map to the same value
+	- It is **NOT** allowed for a key to have two different values
+	- **Black dots** indicate objects of type K (keys) or V (values) that are ***not*** in the map
+	- Each (key, value) pair is called an ***entry***
+		- In the graph below, there are four entries.
+
+![](img/map-adt.png)
+
+```pseudocode
+put(key, value)
+// add the entry (key, value) to the map. If the map previously contained an entry with key, the old value is replaced by the specified value
+
+get(key)
+// returns the value to which the specified key is mapped
+
+remove(key)
+// remove the entry with the specified key. return true if the entry was removed, false otherwise
+```
+
+## Hash Maps
+
+
 

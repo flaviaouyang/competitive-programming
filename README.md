@@ -35,6 +35,8 @@
 - [Expression Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#expression-trees)
 - [Binary Search Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#binary-search-trees)
 - [Heaps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#heaps)
+- [Maps]()
+- [Hash Map]()
 
 ## LICENSE
 
