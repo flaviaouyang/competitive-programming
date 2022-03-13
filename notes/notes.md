@@ -1287,7 +1287,9 @@ remove(key)
 	- E = {(v~i~, v~j~) : i, j ∈ {1, ..., n}}
 	- In an undirected graph, the edges are *unordered paris*
 {% raw %}
+
 		- E = {{v~i~, v~j~} : i, j ∈ { 1, ..., n }}
+		
 {% endraw %}
 ![](img/venn-diagram.png)
 
