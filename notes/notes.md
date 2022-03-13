@@ -1275,5 +1275,91 @@ remove(key)
 
 - load factor equals to the *number of (key, value) pairs in map* over *the number of buckets, m*
 - One typically keeps the load factor below 1. In Java `HashMap` class, the default MAXIMUM load factor is `0.75`
-- 
 
+## Graphs
+
+![](img/graph-example.png)
+
+![](img/weighted-graph-example.png)
+
+- Definition: A directed graph is ***a set of vertices*** and a set of ordered pairs of these vertices called edges
+	- V = {V~i~: i ∈ {1, ..., n}}
+	- E = {(v~i~, v~j~) : i, j ∈ {1, ..., n}}
+	- In an undirected graph, the edges are *unordered paris*
+		- E = {{v~i~, v~j~} : i, j ∈ { 1, ..., n }}
+
+![](img/venn-diagram.png)
+
+### Terminology
+
+- **in degree**: in directed graph, count of edges going in
+
+![](img/in-degree.png)
+
+- **out degree**: opposite of in degree
+
+![](img/out-degree.png)
+
+- **Path**: a path is a sequence of edges such that the end vertex of one edge is the start vertex of the next edge and no vertex is repeated except maybe the first and last
+
+![](img/graph-path.png)
+
+- **cycle**: a cycle is a path such that the **last vertex is the same as the first vertex**
+
+![](img/graph-cycle.png)
+
+### Directed acyclic graph
+
+- A directed acyclic graph (DAG) is a graph that is **directed and without cycles connecting the other edges**. 
+	- This means that it is **impossible to traverse the entire graph starting at one edge**. 
+	- The edges of the directed graph only go one way. 
+	- The graph is a topological sorting, where each node is in a certain order.
+- used to **capture dependencies**
+
+![](img/DAG.png)
+
+### Graph ADT
+
+```pseudocode
+addVertex(), addEdge()
+containsVertex(), containsEdge()
+getVertex(), getEdge()
+removeVertex(), removeEdge()
+numVertices(), numEdges()
+```
+
+### Adjacency Lists
+
+- Generalization of children for graphs
+
+![](img/adjacency-list.png)
+
+### Implementation in Java
+
+```java
+class Graph<T> {
+    //vertices
+    ArrayList <Vertex<T>> vertexList;
+    
+    class Vertex<T> {
+        ArrayList<Vertex> adjList;
+        T element;
+    }
+    
+    class Edge {
+        Vertex endVertex;
+        double weight;
+        // ...
+    }
+}
+```
+
+### Adjacency Matrix
+
+![](img/adjacency-matrix.png)
+
+### Definitions
+
+- Consider a graph with *n* vertices
+	- a graph is **dense** if the number of edges is close to n^2^
+	- a graph is **sparse** if the number of edges is close to n
