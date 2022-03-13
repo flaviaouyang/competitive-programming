@@ -1253,5 +1253,27 @@ remove(key)
 
 ## Hash Maps
 
+### Terminology
 
+- A `hashCode` maps keys to `int`
+- A `hash function` maps keys to `hash values`
+- We use values both to refer to the values of the hash function as well as the values in the key-values pairs of the map we wish to represent
+
+### Problem: Collisions
+
+- Two or more keys can map to the same `hash value`
+- **Solution**: hash table / hash map
+	- each array slot holds a singly linked list of entries
+
+### Buckets
+
+- Each array slot + linked list is called **a bucket**. This map below has *m* buckets
+
+![](img/bucket.png)
+
+### Load factor
+
+- load factor equals to the *number of (key, value) pairs in map* over *the number of buckets, m*
+- One typically keeps the load factor below 1. In Java `HashMap` class, the default MAXIMUM load factor is `0.75`
+- 
 

@@ -7,6 +7,8 @@
 
 ## CONTENT
 
+### Data Structure and Algorithms
+
 - [ArrayList](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#arraylist)
 - LinkedList
   - [Singly LinkedList](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#singly-linked-lists)
@@ -37,6 +39,11 @@
 - [Heaps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#heaps)
 - [Maps]()
 - [Hash Map]()
+
+### Algorithms by Princeton University 
+
+- Union-Find
+	- [dynamic connectivity](slides/UnionFind.pd)
 
 ## LICENSE
 
