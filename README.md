@@ -37,15 +37,13 @@
 - [Expression Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#expression-trees)
 - [Binary Search Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#binary-search-trees)
 - [Heaps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#heaps)
-- [Maps]()
-	- [Hash Map]()
-
-- [Graph]()
+- [Maps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#maps)
+	- [Hash Map](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#hash-maps)
+- [Graph](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#graphs)
 	- recursive graph traversal
 	- Non-recursive graph traversal
 		- depth first
 		- breadth first
-
 
 ### Algorithms by Princeton University 
 
