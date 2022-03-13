@@ -38,7 +38,14 @@
 - [Binary Search Tree](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#binary-search-trees)
 - [Heaps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#heaps)
 - [Maps]()
-- [Hash Map]()
+	- [Hash Map]()
+
+- [Graph]()
+	- recursive graph traversal
+	- Non-recursive graph traversal
+		- depth first
+		- breadth first
+
 
 ### Algorithms by Princeton University 
 
