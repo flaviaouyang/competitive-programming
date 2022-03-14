@@ -1286,10 +1286,11 @@ remove(key)
 	- V = {V~i~: i ∈ {1, ..., n}}
 	- E = {(v~i~, v~j~) : i, j ∈ {1, ..., n}}
 	- In an undirected graph, the edges are *unordered paris*
-{% raw %}
+		{% raw %}
 
 		- E = {{v~i~, v~j~} : i, j ∈ { 1, ..., n }}
 		
+
 {% endraw %}
 ![](img/venn-diagram.png)
 
@@ -1366,3 +1367,68 @@ class Graph<T> {
 - Consider a graph with *n* vertices
 	- a graph is **dense** if the number of edges is close to n^2^
 	- a graph is **sparse** if the number of edges is close to n
+
+### Graph Traversal
+
+#### Recursive: Depth first
+
+- Need to specify a starting vertex
+	- visit all nodes that are reachable by a path from a starting vertex
+
+```pseudocode
+depthFirst_Graph(v) {
+	v.visited = true
+	visit v // do something with v
+	for each w such that (v, w) is in E
+		if !(w.visited):
+			depthFirst_Graph(w)
+}
+```
+
+![](img/graph-traversal-recursive.png)
+
+- Unlike tree traversal for rooted tree, a graph traversal **started from some arbitrary vertex** does **not** necessarily reach all other vertices
+- The order of nodes visited depends on the order of nodes in the adjacency lists
+
+#### Non-recursive: Depth First
+
+- similar to tree traversal, using a stack or a queue
+
+```pseudocode
+// using stack
+traversalUsingStack (v) {
+	initialize empty stack s
+	v.visited = true
+	s.push(v)
+	while s is not empty {
+		cur = s.pop()
+		visit cur
+		for each w in cur.adjList
+			if (!w.visited) {
+				w.visited = true
+				s.push(w)
+			}
+	}
+}
+```
+
+#### Non-recursive: Breadth First
+
+```pseudocode
+// using queue
+traversalUsingQueue (v) {
+    initialize empty queue q
+ 	v.visited = true
+    q.enqueue(v)
+    while q is not empty {
+    	cur = q.dequeue()
+    	for each w in cur.adjList {
+    		if (!w.visiteed) {
+    			w.visited = true
+    			q.enqueue(w)
+    		}
+    	}
+    }
+}
+```
+
