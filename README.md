@@ -44,6 +44,19 @@
 	- Non-recursive graph traversal
 		- depth first
 		- breadth first
+- Hashing
+  - introduction
+  - hash functions
+  - Collision resolution
+
+- Disjoint sets
+  - introduction
+  - Operations
+
+- Heaps
+- BST
+- AVL
+- Red Black trees
 
 ### Algorithms by Princeton University 
 
