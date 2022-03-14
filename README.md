@@ -48,20 +48,15 @@
   - introduction
   - hash functions
   - Collision resolution
-
 - Disjoint sets
   - introduction
   - Operations
-
-- Heaps
-- BST
-- AVL
-- Red Black trees
 
 ### Algorithms by Princeton University 
 
 - [Union-Find](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#union-find)
 	- [dynamic connectivity](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#dynamic-connectivity)
+	- [quick-find]()
 
 ## LICENSE
 
