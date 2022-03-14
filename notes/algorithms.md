@@ -46,3 +46,51 @@ public class UF {
 }
 ```
 
+### Quick find
+
+- It's an ***eager algorithm***
+- Data structure
+	- Integer array `id[]` of size `N`
+	- Interpretation: `p` and `q` are connected iff they have the same id
+
+![](img/quick-find.png)
+
+- Find
+	- check if `p` and `q` have the same id
+- Union
+	- to merge componenets containing `p` and `q`, change all entries whose id equals `id[p]` to `id[q]`
+- Implementation
+
+```java
+public class QuickFindUF {
+    private int[] id;
+    
+    public QuickFindUF (int N) {
+        id = new int[N];
+        // set id of each object to itself
+        for (int i = 0; i < N; i++) {
+            id[i] = i;
+        }
+    }
+    
+    public boolean connected (int p, int q) {
+        return id[p] == id[q];
+    }
+    
+    public void union (int p, int q) {
+        int pid = id[p];
+        int qid = id[q];
+        // change all entries with id[p] to id[q]
+        for (int i = 0; i < id.length; i++) {
+            if (id[i] == pid) {
+                id[i] = qid;
+            }
+        }
+    }
+}
+```
+
+- Analysis:
+	- Quick-find is too slow
+	- Quick find defect: union too expensive (quadratic time)
+
