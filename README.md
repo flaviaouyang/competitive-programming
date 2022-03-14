@@ -40,10 +40,10 @@
 - [Maps](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#maps)
 	- [Hash Map](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#hash-maps)
 - [Graph](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#graphs)
-	- recursive graph traversal
+	- [Recursive graph traversal](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#recursive-depth-first)
 	- Non-recursive graph traversal
-		- depth first
-		- breadth first
+		- [depth first](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#non-recursive-depth-first)
+		- [breadth first](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/notes.md#non-recursive-breadth-first)
 - Hashing
   - introduction
   - hash functions
@@ -56,7 +56,7 @@
 
 - [Union-Find](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#union-find)
 	- [dynamic connectivity](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#dynamic-connectivity)
-	- [quick-find]()
+	- [quick-find](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#quick-find)
 
 ## LICENSE
 
