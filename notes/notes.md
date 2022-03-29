@@ -1432,3 +1432,12 @@ traversalUsingQueue (v) {
 }
 ```
 
+## Hashing
+
+- A map is a set of (key, value) pairs. Each key maps to at most one value
+- **Why use hash**
+	- effective and practical
+	- Require a dynamic set that supports only the dictionary operations
+		- INSERT, SEARCH, and DELETE
+	- A hash table is an effective data structure for implementing dictionaries
+- 
