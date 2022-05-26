@@ -2,11 +2,10 @@
 
 ## STRUCTURE
 
-- Data Structure and Algorithms Basics
-- Algorithm Design Manual
-- Question Patterns
-- Leetcode notes
-- Hackerrank notes
+- Data Structures
+- Algorithms
+- Different Patterns
+- Practice Questions
 
 ## CONTENT
 
