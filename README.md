@@ -51,9 +51,6 @@
 - Disjoint sets
   - introduction
   - Operations
-
-### Algorithms by Princeton University 
-
 - [Union-Find](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#union-find)
 	- [dynamic connectivity](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#dynamic-connectivity)
 	- [quick-find](https://github.com/flaviaouyang/data-structure-and-algorithms/blob/master/notes/algorithms.md#quick-find)
