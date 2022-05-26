@@ -22,9 +22,9 @@
 - Queues
 - Induction
   - [Recursion](./data-structure-and-algorithms/recursion/fibonacci.js)
-  - [Binary Search](./data-structure-and-algorithms/recursion/binarySearch.js)
-  - [Merge sort](./data-structure-and-algorithms/recursion/mergeSort.js)
-  - [Quick sort](./data-structure-and-algorithms/recursion/quickSort.js)
+  - Binary Search
+  - Merge sort
+  - Quick sort
   - Recurrence
 - Trees
   - Rooted trees
