@@ -12,6 +12,7 @@
 ### Algorithm Design
 
 - [introduction](./algortihm-design/introduction.md)
+- [robot tour optimization](./algortihm-design/robot-tour-optimization.md)
 
 ### Data Structure and Algorithms
 
