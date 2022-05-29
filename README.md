@@ -9,6 +9,10 @@
 
 ## CONTENT
 
+### Algorithm Design
+
+- [introduction](./algortihm-design/introduction.md)
+
 ### Data Structure and Algorithms
 
 - [ArrayList](./data-structure-and-algorithms/lists/ArrList.java)
