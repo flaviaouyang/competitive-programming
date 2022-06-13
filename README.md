@@ -16,7 +16,7 @@
 
 ### Data Structure and Algorithms
 
-- [ArrayList](./data-structure-and-algorithms/lists/ArrList.java)
+- ArrayList
 - LinkedList
   - Singly LinkedList
   - Doubly LinkedList
@@ -25,7 +25,7 @@
 - Stacks
 - Queues
 - Induction
-  - [Recursion](./data-structure-and-algorithms/recursion/fibonacci.js)
+  - Recursion
   - Binary Search
   - Merge sort
   - Quick sort
